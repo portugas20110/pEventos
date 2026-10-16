@@ -1,0 +1,47 @@
+name: pEventos
+version: '1.0.0'
+main: com.exemplo.peventos.PEventos
+api-version: '1.20'
+description: Painel de eventos com regras em tempo real, times, cooldown, whitelist e gestão de jogadores.
+authors: [Voce]
+
+commands:
+  evento:
+    description: Abre o painel de eventos e gerencia o sistema.
+    usage: /<command> [times | cooldown | entrada | spawn | kit | curar | tpall | limpar | revive | vivos | resetar | reload]
+    aliases: [eventos, event]
+    permission: eventos.menu
+
+permissions:
+  eventos.admin:
+    description: Acesso total ao plugin de eventos.
+    default: op
+    children:
+      eventos.menu: true
+      eventos.times: true
+      eventos.cooldown: true
+      eventos.entrada: true
+      eventos.gerir: true
+      eventos.reload: true
+      eventos.bypass: true
+  eventos.menu:
+    description: Permite abrir o menu /evento e alterar as regras.
+    default: op
+  eventos.times:
+    description: Permite ativar/desativar/sortear os times.
+    default: op
+  eventos.cooldown:
+    description: Permite iniciar/parar o cooldown com BossBar.
+    default: op
+  eventos.entrada:
+    description: Permite abrir/fechar a entrada (whitelist).
+    default: op
+  eventos.gerir:
+    description: Permite curar, teleportar, spawn, kit, limpar, reviver e resetar.
+    default: op
+  eventos.reload:
+    description: Permite recarregar o config.yml.
+    default: op
+  eventos.bypass:
+    description: Ignora as regras de construção, interação, drop, chat e movimento quando desativadas.
+    default: op

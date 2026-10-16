@@ -1,0 +1,278 @@
+
+
+cooldown:
+  padrao-segundos: 60
+  max-segundos: 86400
+  presets: [30, 60, 120, 300, 600]
+  bossbar:
+    cor: YELLOW
+    estilo: SOLID
+
+times:
+  minimo-jogadores: 2
+  azul:
+    nome: "&9Time Azul"
+  vermelho:
+    nome: "&cTime Vermelho"
+
+entrada:
+  adicionar-online-ao-fechar: true
+
+menu:
+  titulos:
+    principal: "&8Painel de Eventos"
+    regras: "&8Eventos » Regras"
+    times: "&8Eventos » Times"
+    cooldown: "&8Eventos » Cooldown"
+    jogadores: "&8Eventos » Jogadores"
+  ativado: "&aATIVADO"
+  desativado: "&cDESATIVADO"
+  estado-nome: "{opcao} &8» {estado}"
+  estado-linha: "&7Estado atual: {estado}"
+  dica-alternar: "&eClique para alternar"
+  times-ativos: "&aAtivos"
+  times-inativos: "&cInativos"
+  cooldown-ativo: "&aEm andamento"
+  cooldown-inativo: "&cParado"
+  entrada-aberta: "&aABERTA"
+  entrada-fechada: "&cFECHADA"
+
+  itens:
+    voltar:
+      nome: "&c« Voltar"
+      descricao:
+        - "&7Volta ao menu principal."
+
+    principal:
+      regras:
+        nome: "&6Regras"
+        descricao:
+          - "&7PvP, blocos, interação, queda,"
+          - "&7fome, drops, chat e movimento."
+          - ""
+          - "&eClique para abrir"
+      times:
+        nome: "&9Times"
+        descricao:
+          - "&7Times automáticos Azul e Vermelho."
+          - "&7Estado: {estado}"
+          - ""
+          - "&eClique para abrir"
+      cooldown:
+        nome: "&eCooldown"
+        descricao:
+          - "&7Contagem regressiva com BossBar."
+          - "&7Estado: {estado}"
+          - ""
+          - "&eClique para abrir"
+      jogadores:
+        nome: "&bJogadores"
+        descricao:
+          - "&7Curar, teleportar, kit, eliminação..."
+          - "&7Vivos: &f{vivos} &8| &7Eliminados: &f{eliminados}"
+          - ""
+          - "&eClique para abrir"
+      entrada:
+        nome: "&dEntrada de jogadores"
+        descricao:
+          - "&7Controla a whitelist do servidor."
+          - "&7Entrada: {estado}"
+          - ""
+          - "&eClique para abrir/fechar"
+      resetar:
+        nome: "&4Resetar evento"
+        descricao:
+          - "&7Desativa times e cooldown, restaura"
+          - "&7todas as regras e revive eliminados."
+          - ""
+          - "&cShift + clique para confirmar"
+
+    opcoes:
+      pvp:
+        nome: "&cPvP"
+        descricao:
+          - "&7Permite combate entre jogadores."
+      quebrar:
+        nome: "&6Quebrar blocos"
+        descricao:
+          - "&7Permite destruir blocos"
+          - "&7(inclui encher baldes)."
+      colocar:
+        nome: "&aColocar blocos"
+        descricao:
+          - "&7Permite construir"
+          - "&7(inclui despejar água e lava)."
+      interacao:
+        nome: "&bInteragir"
+        descricao:
+          - "&7Baús, portas, botões, alavancas,"
+          - "&7aldeões e uso de itens."
+      queda:
+        nome: "&fDano de queda"
+        descricao:
+          - "&7Jogadores sofrem dano ao cair."
+      fome:
+        nome: "&eFome"
+        descricao:
+          - "&7A barra de fome diminui com o tempo."
+      dropar:
+        nome: "&7Dropar itens"
+        descricao:
+          - "&7Permite jogar itens no chão."
+      chat:
+        nome: "&dChat"
+        descricao:
+          - "&7Permite falar no chat."
+          - "&8(quem tem eventos.bypass ainda fala)"
+      movimento:
+        nome: "&3Movimento"
+        descricao:
+          - "&7Desativado = jogadores congelados."
+          - "&8(quem tem eventos.bypass ainda anda)"
+      eliminacao:
+        nome: "&4Eliminação ao morrer"
+        descricao:
+          - "&7Quem morre vira espectador e o"
+          - "&7último jogador/time vivo vence."
+
+    times:
+      ativar:
+        nome: "&aAtivar Times"
+        descricao:
+          - "&7Divide os jogadores online em"
+          - "&9Time Azul &7e &cTime Vermelho&7,"
+          - "&7entrega armadura colorida e"
+          - "&7bloqueia PvP entre aliados."
+          - ""
+          - "&7Estado: {estado}"
+      desativar:
+        nome: "&cDesativar Times"
+        descricao:
+          - "&7Remove os times, devolve a armadura"
+          - "&7original e libera o PvP entre todos."
+          - ""
+          - "&7Estado: {estado}"
+      sortear:
+        nome: "&dSortear novamente"
+        descricao:
+          - "&7Refaz a divisão dos times"
+          - "&7mantendo o sistema ativo."
+      info:
+        nome: "&fJogadores por time"
+        descricao:
+          - "&9Azul: &f{azul}"
+          - "&cVermelho: &f{vermelho}"
+          - ""
+          - "&7Estado: {estado}"
+
+    cooldown:
+      preset:
+        nome: "&eIniciar &f{tempo}"
+        descricao:
+          - "&7Inicia a BossBar com esse tempo."
+          - "&7Estado: {estado}"
+          - ""
+          - "&8Outro tempo: /evento cooldown <segundos>"
+      parar:
+        nome: "&cParar cooldown"
+        descricao:
+          - "&7Cancela a contagem atual."
+          - "&7Estado: {estado}"
+
+    jogadores:
+      curar:
+        nome: "&aCurar todos"
+        descricao:
+          - "&7Vida e fome cheias para todos"
+          - "&7os participantes."
+      tpall:
+        nome: "&5Teleportar todos até você"
+        descricao:
+          - "&7Leva os participantes até"
+          - "&7a sua posição."
+      spawn:
+        nome: "&bSpawn do evento"
+        descricao:
+          - "&eClique esquerdo: &7leva todos ao spawn"
+          - "&eClique direito: &7define o spawn aqui"
+      kit:
+        nome: "&6Kit do evento"
+        descricao:
+          - "&eClique esquerdo: &7entrega o kit a todos"
+          - "&eClique direito: &7salva seu inventário"
+          - "&7como kit"
+      reviver:
+        nome: "&aReviver todos"
+        descricao:
+          - "&7Devolve os eliminados ao jogo"
+          - "&7(modo Survival, no spawn se houver)."
+      vivos:
+        nome: "&fJogadores vivos"
+        descricao:
+          - "&7Vivos: &f{vivos}"
+          - "&7Eliminados: &f{eliminados}"
+          - ""
+          - "&eClique para listar no chat"
+      limpar:
+        nome: "&cLimpar inventários"
+        descricao:
+          - "&7Esvazia o inventário de todos"
+          - "&7os participantes."
+          - ""
+          - "&cShift + clique para confirmar"
+
+mensagens:
+  prefixo: "&8[&6Evento&8] &r"
+  sem-permissao: "{prefixo}&cVocê não tem permissão para isso."
+  apenas-jogadores: "{prefixo}&cApenas jogadores podem usar isso."
+  uso: "{prefixo}&eUso: &f/evento [menu | times <ativar|desativar|sortear> | cooldown <segundos|parar> | entrada <abrir|fechar> | spawn <definir|ir> | kit <salvar|dar> | curar | tpall | limpar | revive <jogador|todos> | vivos | resetar | reload]"
+  recarregado: "{prefixo}&aConfiguração recarregada."
+  opcao-alterada: "{prefixo}&7{opcao} &7agora está {estado} &7(por &f{jogador}&7)."
+
+  # Regras
+  pvp-desativado: "{prefixo}&cO PvP está desativado."
+  quebrar-desativado: "{prefixo}&cQuebrar blocos está desativado."
+  colocar-desativado: "{prefixo}&cColocar blocos está desativado."
+  interacao-desativada: "{prefixo}&cInteragir está desativado."
+  dropar-desativado: "{prefixo}&cDropar itens está desativado."
+  chat-desativado: "{prefixo}&cO chat está desativado."
+  movimento-desativado: "{prefixo}&bVocê está congelado!"
+
+  times-ativados: "{prefixo}&aTimes ativados! &9Azul: &f{azul} &8| &cVermelho: &f{vermelho}"
+  times-ja-ativos: "{prefixo}&cOs times já estão ativos."
+  times-nao-ativos: "{prefixo}&cOs times não estão ativos."
+  times-poucos-jogadores: "{prefixo}&cSão necessários pelo menos &f{minimo} &cjogadores online."
+  times-desativados: "{prefixo}&eOs times foram desativados."
+  voce-no-time: "{prefixo}&7Você está no {time}&7!"
+  fogo-amigo: "{prefixo}&cVocê não pode atacar um colega de time!"
+
+  cooldown-iniciado: "{prefixo}&aCooldown iniciado: &f{tempo}"
+  cooldown-fim: "{prefixo}&aO cooldown terminou!"
+  cooldown-parado: "{prefixo}&eO cooldown foi cancelado."
+  cooldown-nao-ativo: "{prefixo}&cNão há nenhum cooldown em andamento."
+  cooldown-invalido: "{prefixo}&cInforme um número de segundos entre 1 e {max}."
+  bossbar-titulo: "&e⏳ Tempo restante: &f{tempo}"
+
+  entrada-aberta: "{prefixo}&aA entrada está ABERTA! &7Qualquer jogador pode entrar."
+  entrada-fechada: "{prefixo}&cA entrada está FECHADA! &7Só quem está na whitelist pode entrar."
+
+  curados: "{prefixo}&aTodos os participantes foram curados."
+  teleportados-todos: "{prefixo}&a{quantidade} jogador(es) teleportado(s) até você."
+  teleportados-spawn: "{prefixo}&b{quantidade} jogador(es) levado(s) ao spawn do evento."
+  spawn-definido: "{prefixo}&aSpawn do evento definido na sua posição."
+  spawn-nao-definido: "{prefixo}&cO spawn do evento ainda não foi definido. Use /evento spawn definir."
+  kit-salvo: "{prefixo}&aSeu inventário foi salvo como kit do evento."
+  kit-nao-salvo: "{prefixo}&cNenhum kit foi salvo ainda. Use /evento kit salvar."
+  kit-entregue: "{prefixo}&6Kit entregue a &f{quantidade} &6jogador(es)."
+  inventarios-limpos: "{prefixo}&eInventário de &f{quantidade} &ejogador(es) limpo."
+  limpar-confirmar: "{prefixo}&cUse &fShift + clique &cpara confirmar."
+  reset-confirmar: "{prefixo}&cUse &fShift + clique &cpara confirmar o reset."
+  evento-resetado: "{prefixo}&eO evento foi resetado: regras restauradas, times e cooldown desligados."
+
+  jogador-eliminado: "{prefixo}&c{jogador} &7foi eliminado! Restam &f{restantes}&7."
+  vencedor-time: "{prefixo}&6&lVitória! &r{time} &7venceu o evento!"
+  vencedor-jogador: "{prefixo}&6&lVitória! &f{jogador} &7venceu o evento!"
+  voce-revivido: "{prefixo}&aVocê voltou ao jogo!"
+  todos-revividos: "{prefixo}&a{quantidade} jogador(es) revivido(s)."
+  jogador-nao-encontrado: "{prefixo}&cJogador &f{jogador} &cnão encontrado."
+  vivos-lista: "{prefixo}&7Vivos (&f{quantidade}&7): &f{lista} &8| &7Eliminados: &f{eliminados}"
